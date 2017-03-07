@@ -1,6 +1,3 @@
-//https://api.github.com/users/addyosmani/orgs
-
-
 
 let promise = fetch(
     'https:api.github.com/users/addyosmani/orgs', {
@@ -39,29 +36,10 @@ promise.then(function handleResponse(responseObj) {
         });
     } else {
         // console.log('Broken', responseObj.status);
-        console.log(document.getElementsByClassName('error'));
-        // let error = document.querySelectorAll(' .error');
-        // error.innerText = "YOU BROKE IT!!";
+        // console.log(document.getElementsByClassName('error'));
         let error = document.getElementsByClassName('error');
         let errorCode = responseObj.status;
         error[0].innerText = 'Broken ' + errorCode ;
     }
-
     console.log(loginArray, imgArray);
 });
-
-
-
-
-//Were going to fetch the data from github
-//     ***** --- check that we are getting data from github
-//     ****take the response and turn it into an array
-//--****we want th eorganization entry and the logo
-//--****we need to handle any errors from the server ftom the gh status
-//--these need to bne added top a UL inside the HTML via JS
-//--      add the login index and img index to the UL
-//--
-//--
-//--
-//--      --this will use the dom methods
-//--
