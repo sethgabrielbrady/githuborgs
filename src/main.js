@@ -38,7 +38,13 @@ promise.then(function handleResponse(responseObj) {
             });
         });
     } else {
-        console.log('Error-', responseObj.status);
+        // console.log('Broken', responseObj.status);
+        console.log(document.getElementsByClassName('error'));
+        // let error = document.querySelectorAll(' .error');
+        // error.innerText = "YOU BROKE IT!!";
+        let error = document.getElementsByClassName('error');
+        let errorCode = responseObj.status;
+        error[0].innerText = 'Broken ' + errorCode ;
     }
 
     console.log(loginArray, imgArray);
