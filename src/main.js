@@ -6,7 +6,7 @@ let promise = fetch(
     'https:api.github.com/users/addyosmani/orgs', {
         method: 'GET',
         headers: {
-            Authorization: 'token d2b1b642f9fb46503b9963224d58230124400c08'
+            Authorization: 'token '
         }
 
     }
