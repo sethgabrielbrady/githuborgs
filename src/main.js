@@ -3,7 +3,7 @@ let promise = fetch(
     'https:api.github.com/users/addyosmani/orgs', {
         method: 'GET',
         headers: {
-            Authorization: 'token'
+            Authorization: 'token e51a3e5b9911663472da1ab815d73fb7660ad293'
         }
     }
 );
@@ -28,8 +28,8 @@ promise.then(function handleResponse(responseObj) {
               let orgsLogin = document.createElement('h3');
               orgsLogin.innerText = orgsData.login;
               //we need to add the lgin here
-              orgsDataLi.appendChild(orgsLogin);
               orgsDataLi.appendChild(orgsImg);
+              orgsDataLi.appendChild(orgsLogin);
               // console.log(orgsDataLi);
               document.getElementById('organizations').childNodes[3].appendChild(orgsDataLi);
             });

@@ -1,0 +1,12 @@
+ul {
+  list-style: none; }
+  ul li {
+    display: flex;
+    background-color: grey;
+    height: 8em; }
+    ul li h3 {
+      flex: 60%;
+      font-size: 3em;
+      align-self: center; }
+
+/*# sourceMappingURL=style.css.map */
