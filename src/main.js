@@ -6,9 +6,8 @@ let promise = fetch(
     'https:api.github.com/users/addyosmani/orgs', {
         method: 'GET',
         headers: {
-            Authorization: 'token '
+            Authorization: 'token'
         }
-
     }
 );
 
@@ -21,21 +20,28 @@ promise.then(function handleResponse(responseObj) {
         responseObj.json().then(function printData(data) {
 
             data.forEach(function getLoginAndAvatar(orgsData) {
-
-              loginArray.push(orgsData.login);
+              // loginArray.push(orgsData.login);
               // console.log(loginArray);
-              imgArray.push(orgsData.avatar_url);
+              // imgArray.push(orgsData.avatar_url);
               // console.log(imgArray);
-
+              let orgsDataLi = document.createElement('li');
+              let orgsImg = document.createElement('img');
+              orgsImg.setAttribute('src', orgsData.avatar_url);
+              //we need to add the image here
+              let orgsLogin = document.createElement('h3');
+              orgsLogin.innerText = orgsData.login;
+              //we need to add the lgin here
+              orgsDataLi.appendChild(orgsLogin);
+              orgsDataLi.appendChild(orgsImg);
+              // console.log(orgsDataLi);
+              document.getElementById('organizations').childNodes[3].appendChild(orgsDataLi);
             });
-
-
         });
     } else {
         console.log('Error-', responseObj.status);
     }
 
-    console.log(loginArray, imgArray)
+    console.log(loginArray, imgArray);
 });
 
 
