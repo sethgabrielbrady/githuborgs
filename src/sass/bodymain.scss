@@ -1,16 +1,16 @@
 ul {
   list-style: none;
   li {
-    display: flex;
     background-color: grey;
     // flex-direction: column;
     height: 8em;
     img {
+      width:7%;
+      float:left;
     }
     h3 {
-      flex: 60%;
       font-size:3em;
-      align-self: center;
+      vertical-align: middle;
     }
   }
 }
