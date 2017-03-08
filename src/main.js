@@ -3,7 +3,7 @@ let promise = fetch(
     'https:api.github.com/users/addyosmani/orgs', {
         method: 'GET',
         headers: {
-            Authorization: 'token '
+            Authorization: 'token  '
         }
     }
 );

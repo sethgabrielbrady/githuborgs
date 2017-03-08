@@ -1,13 +1,18 @@
 ul {
   list-style: none; }
   ul li {
-    background-color: grey;
-    height: 8em; }
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    height: 7.5em;
+    margin: 1em; }
     ul li img {
-      width: 7%;
-      float: left; }
+      margin: 1em;
+      width: 75px;
+      float: left;
+      border-radius: 10px; }
     ul li h3 {
-      font-size: 3em;
-      vertical-align: middle; }
+      font-size: 4em;
+      color: #a8a8a8; }
 
 /*# sourceMappingURL=style.css.map */
